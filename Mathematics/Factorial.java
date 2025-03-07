@@ -1,3 +1,5 @@
+import java.math.BigInteger;
+
 /***
  * Problem: Factorial of a number
  * 5! = 5 × 4 × 3 × 2 × 1 = 120
@@ -23,9 +25,18 @@ public class Factorial {
         }
     }
 
+    public static void factLargeNumbers(int x){
+        BigInteger fact = BigInteger.ONE;
+        for(int i = 2;i<=x;i++){
+            fact = fact.multiply(BigInteger.valueOf(i));
+        }
+        System.out.println(fact);
+    }
     public static void main(String[] args) {
-        int x = 0;
+        int x = 10;
         fact(x);
+        int y = 100;
+        factLargeNumbers(y);
     }
 
 }
