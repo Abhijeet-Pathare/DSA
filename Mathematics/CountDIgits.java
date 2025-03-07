@@ -19,8 +19,15 @@ public class CountDIgits {
         }
         System.out.println("Number of digits are "+res);
     }
+
+    //Second approach: faster and good for large numbers
+    public static void countUsingLog10(int x){
+        int count = (int)Math.log10(x)+1;
+        System.out.println("Number of digits are "+count);
+    }
     public static void main(String[] args) {
         int x = 9235;
         count(x);
+        countUsingLog10(x);
     }
 }
