@@ -5,6 +5,7 @@ public class Main {
         myList.append(5);
         myList.printList();
         myList.append(6);
-        myList.printList();
+        System.out.println("removing 6");
+        System.out.println(myList.removeLast().value);
     }
 }
