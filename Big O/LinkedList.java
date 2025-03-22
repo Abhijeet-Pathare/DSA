@@ -39,17 +39,17 @@ public class LinkedList {
         }
     }
 
-        public void append ( int value){
-            Node newNode = new Node(value);
-            if(head == null){
-                head = newNode;
-                tail = newNode;
-            }else{
-                tail.next = newNode;
-                tail = newNode;
-            }
-            length++;
+    public void append ( int value){
+        Node newNode = new Node(value);
+        if(head == null){
+            head = newNode;
+            tail = newNode;
+        }else{
+            tail.next = newNode;
+            tail = newNode;
         }
+        length++;
+    }
 
         //Remove Last
     public Node removeLast(){
@@ -149,5 +149,23 @@ public class LinkedList {
         temp.next = null;
         length--;
         return temp;
+    }
+
+    public void reverse(){
+        Node temp = head;
+        head = tail;
+        tail = temp;
+
+        Node after = tail.next;
+        Node before = null;
+
+        //The order for this variables is to maintained as is: otherwise it will fail
+        for(int i=0;i<length;i++){
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
+        }
+
     }
 }
