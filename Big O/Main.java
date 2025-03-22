@@ -7,9 +7,10 @@ public class Main {
         myList.append(6);
 //        System.out.println("removing 6");
 //        System.out.println(myList.removeLast().value);
-        myList.prepend(3);
-        myList.printList();
-        System.out.println(myList.removeFirst().value);
+//        myList.prepend(3);
+//        myList.printList();
+//        System.out.println(myList.removeFirst().value);
+        System.out.println(myList.get(2).value);
 
     }
 }
