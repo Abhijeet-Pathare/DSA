@@ -11,6 +11,9 @@ public class Main {
 //        myList.printList();
 //        System.out.println(myList.removeFirst().value);
         System.out.println(myList.get(2).value);
+        System.out.println(myList.set(1,1));
+        System.out.println("************");
+        myList.printList();
 
     }
 }
