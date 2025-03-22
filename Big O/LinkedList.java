@@ -82,4 +82,16 @@ public class LinkedList {
         }
         length++;
     }
+
+    public Node removeFirst(){
+        Node temp = head;
+        if(length == 0)
+            return null;
+        head = head.next;
+        temp.next = null;
+        length--;
+        if(length == 0)
+            tail = null;
+        return temp;
+    }
 }

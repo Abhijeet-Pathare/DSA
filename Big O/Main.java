@@ -9,5 +9,7 @@ public class Main {
 //        System.out.println(myList.removeLast().value);
         myList.prepend(3);
         myList.printList();
+        System.out.println(myList.removeFirst().value);
+
     }
 }
