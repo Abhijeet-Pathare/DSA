@@ -34,6 +34,22 @@ public class Stack {
         }
     }
 
+    //push method to add elements to the top of the stack
+    public void push(int value){
+        //create a node with the value
+        Node newNode = new Node(value);
+        //check if the stack has any elements or is empty
+        //top == null
+        if(height == 0) {
+            top = newNode;
+        }else{
+            newNode.next = top;
+            top = newNode;
+        }
+        //we increase height out of the if else block because in either conditions we are going to add an element to the stack
+        height++;
+    }
+
     public void getTop(){
         System.out.println("Top: "+top.value);
     }
