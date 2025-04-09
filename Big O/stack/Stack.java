@@ -50,6 +50,21 @@ public class Stack {
         height++;
     }
 
+    //pop method to remove elements from top of the stack
+    public Node pop(){
+        //check if the stack is empty
+        if(height == 0){
+            System.out.println("Stack is already empty!");
+            return null;
+        }else{
+            Node temp = top;
+            top = top.next;
+            temp.next = null;
+            height--;
+            System.out.println("Poped : "+temp.value);
+            return temp;
+        }
+    }
     public void getTop(){
         System.out.println("Top: "+top.value);
     }
