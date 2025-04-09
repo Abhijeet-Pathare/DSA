@@ -22,5 +22,23 @@ public class Stack {
     }
 
     //print elements in stack
+    public void printStack(){
+        if(top == null || height==0){
+            System.out.println("Stack is empty!");;
+        }else{
+            Node temp = top;
+            while(temp != null){
+                System.out.println(temp.value);
+                temp = temp.next;
+            }
+        }
+    }
 
+    public void getTop(){
+        System.out.println("Top: "+top.value);
+    }
+
+    public void getHeight(){
+        System.out.println("Height: "+height);
+    }
 }
