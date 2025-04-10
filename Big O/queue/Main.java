@@ -11,5 +11,10 @@ public class Main {
 
         myQueue.enqueue(5);
         myQueue.printQueue();
+
+        myQueue.dequeue();//removes 3
+        myQueue.printQueue();
+        myQueue.dequeue();
+        myQueue.printQueue();
     }
 }
