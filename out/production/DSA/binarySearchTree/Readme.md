@@ -7,3 +7,14 @@ while loop
     if newNode == temp return false
     if < left else > right
     if null insert newNode else move next
+------------------------------------------
+
+Steps for CONTAINS:
+--------------------
+if root == null return false
+temp = root
+while temp != null
+    if < left
+    else if > right
+    else == return true
+return false

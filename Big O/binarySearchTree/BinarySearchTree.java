@@ -43,4 +43,26 @@ public class BinarySearchTree {
         }
     }
 
+    //contains method
+    public boolean contains(int value){
+        /*
+        this code is not required. If the BST is empty we return false
+        after the while loop if we dont find the value
+                if(root == null){
+                    return false;
+                }
+        */
+        Node temp = root;
+        while(temp != null){
+            if(value < temp.value){
+                temp = temp.left;
+            }else if(value > temp.value){
+                temp = temp.right;
+            }else{
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
