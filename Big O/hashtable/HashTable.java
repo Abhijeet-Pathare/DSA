@@ -44,4 +44,28 @@ public class HashTable {
         }
         return hash;
     }
+
+    //set method
+    public void set(String key,int value){
+        //determine at which index to put in
+        int index = hash(key);
+
+        //create a node to put in the index
+        Node newNode = new Node(key,value);
+
+        /***check if the index is null add
+          newNode to the index else iterate
+          through the linked list present at the
+          index and insert at the end ***/
+        if(dataMap[index] == null){
+            dataMap[index] = newNode;
+        }else{
+            Node temp = dataMap[index];
+            while(temp.next!=null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        }
+
+    }
 }
