@@ -1,6 +1,7 @@
 package hashtable;
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 
 public class HashTable {
     private int size = 7;
@@ -79,5 +80,18 @@ public class HashTable {
         }
         System.out.println("No value found for key "+key);
         return 0;
+    }
+
+    //keys method returns all the keys present in the hashtable
+    public ArrayList keys(){
+        ArrayList<String> allKeys = new ArrayList<>();
+        for(int i=0;i<dataMap.length;i++){
+             Node temp = dataMap[i];
+             while(temp != null){
+                 allKeys.add(temp.key);
+                 temp = temp.next;
+             }
+        }
+        return allKeys;
     }
 }
