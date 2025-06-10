@@ -1,7 +1,5 @@
 package hashtable.leetcode;
 
-package com.app;
-
 import java.util.*;
 
 
