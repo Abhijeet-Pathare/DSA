@@ -5,7 +5,11 @@ public class Main {
         Graph myGraph = new Graph();
 
         myGraph.addVertex("A");
+        myGraph.addVertex("B");
 
+        myGraph.printGraph();
+
+        myGraph.addEdge("A","B");
         myGraph.printGraph();
     }
 }
